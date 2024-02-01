@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
     display:flex;
@@ -126,12 +127,32 @@ const fronttitle = () => {
 return (
     <>
         <Wrapper>
-            <Texttitle>
-                Dawid Rak
-            </Texttitle>
+            <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01]
+            }}
+            >
+                <Texttitle>
+                    Dawid Rak
+                </Texttitle>
+            </motion.div>
+            <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01]
+            }}
+            >
             <Undertitle>
                 Frontend Developer
             </Undertitle>
+            </motion.div>
         </Wrapper>
         <Arrowwrapper>
             <Rightarrow></Rightarrow>
@@ -139,14 +160,24 @@ return (
             <Leftarrow></Leftarrow>
         </Arrowwrapper>
         <Navleft>
-            <About>
-                About
-            </About>
+            <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}       
+            >
+                <About>
+                    About
+                </About>
+            </motion.div>
         </Navleft>
         <Navright>
-            <Mail>
-                dawidrak.contact@gmail.com
-            </Mail>
+            <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }} 
+            >
+                <Mail>
+                    dawidrak.contact@gmail.com
+                </Mail>
+            </motion.div>
         </Navright>
     </>
 )
