@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -18,7 +18,7 @@ const Texttitle = styled.h1`
     font-family: Relative;
 `;
 
-const Undertitle = styled.p`
+const Undertitle = styled.h2`
     color: white;
     margin-top: 0;
     letter-spacing: 2px;
@@ -70,7 +70,48 @@ const Rightarrow = styled.div`
     margin-left: 22px;
 `
 
+const Navleft = styled.div`
+    z-index: 999;
+    position: absolute;
+    transform: rotateZ(-90deg) translateX(-50%);
+    transform-origin: 0 50%;
+    top: 50%;
+    display: inline-block;
+    padding: 10px;
+    left: 40px;
+`
+
+const About = styled.h3`
+    color: #fff;
+    opacity: .5;
+    white-space: nowrap;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    font-size: 11px;
+`
+
+const Navright = styled.div`
+    z-index: 999;
+    position: absolute;
+    transform: rotateZ(-90deg) translateX(50%);
+    transform-origin: 100% 50%;
+    top: 50%;
+    display: inline-block;
+    padding: 10px;
+    right: 40px;
+`
+
+const Mail = styled.h3`
+    color: #fff;
+    opacity: .5;
+    white-space: nowrap;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    font-size: 11px;
+`
+
 const fronttitle = () => {
+
 
 return (
     <>
@@ -87,6 +128,16 @@ return (
             <Arrow></Arrow>
             <Leftarrow></Leftarrow>
         </Arrowwrapper>
+        <Navleft>
+            <About>
+                About
+            </About>
+        </Navleft>
+        <Navright>
+            <Mail>
+                dawidrak.contact@gmail.com
+            </Mail>
+        </Navright>
     </>
 )
 }
