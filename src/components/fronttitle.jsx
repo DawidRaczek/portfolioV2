@@ -123,7 +123,6 @@ const Mail = styled.h3`
 
 const fronttitle = () => {
 
-
 return (
     <>
         <Wrapper>
@@ -171,41 +170,45 @@ return (
         </motion.div>
         <Navleft>
             <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", 
-                                stiffness: 400, 
-                                damping: 17,
-                                duration: 0.8,
-                                delay: 1,
-                                ease: [0, 0.71, 0.2, 1.01]    
-                            }}       
-            >
-                <About>
-                    About
-                </About>
-            </motion.div>
+                transition={{ stiffness: 400, damping: 17 }}
+                >
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 1,
+                    ease: [0, 0.71, 0.2, 1.01] 
+                    }}
+                    >
+                    <About>
+                        About
+                    </About>
+                    </motion.div>
+                </motion.div>
         </Navleft>
         <Navright>
             <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ stiffness: 400, damping: 17 }}
+            >
+            <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", 
-                                stiffness: 400, 
-                                damping: 17,
-                                duration: 0.8,
-                                delay: 1,
-                                ease: [0, 0.71, 0.2, 1.01]    
-                            }}       
-            >
+                transition={{
+                  duration: 0.8,
+                  delay: 1,
+                  ease: [0, 0.71, 0.2, 1.01] 
+                }}
+                >
                 <Mail>
                     dawidrak.contact@gmail.com
                 </Mail>
             </motion.div>
+                </motion.div>
         </Navright>
     </>
 )
