@@ -154,15 +154,34 @@ return (
             </Undertitle>
             </motion.div>
         </Wrapper>
+        <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 1,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+        >
         <Arrowwrapper>
             <Rightarrow></Rightarrow>
             <Arrow></Arrow>
             <Leftarrow></Leftarrow>
         </Arrowwrapper>
+        </motion.div>
         <Navleft>
             <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}       
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", 
+                                stiffness: 400, 
+                                damping: 17,
+                                duration: 0.8,
+                                delay: 1,
+                                ease: [0, 0.71, 0.2, 1.01]    
+                            }}       
             >
                 <About>
                     About
@@ -171,8 +190,17 @@ return (
         </Navleft>
         <Navright>
             <motion.div
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }} 
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", 
+                                stiffness: 400, 
+                                damping: 17,
+                                duration: 0.8,
+                                delay: 1,
+                                ease: [0, 0.71, 0.2, 1.01]    
+                            }}       
             >
                 <Mail>
                     dawidrak.contact@gmail.com
