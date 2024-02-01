@@ -88,6 +88,11 @@ const About = styled.h3`
     cursor: pointer;
     letter-spacing: 1.5px;
     font-size: 11px;
+    transition: opacity .3s;
+
+    &:hover {
+        opacity: 1;
+    }
 `
 
 const Navright = styled.div`
@@ -108,6 +113,11 @@ const Mail = styled.h3`
     cursor: pointer;
     letter-spacing: 1.5px;
     font-size: 11px;
+    transition: opacity .3s;
+
+    &:hover {
+        opacity: 1;
+    }
 `
 
 const fronttitle = () => {
